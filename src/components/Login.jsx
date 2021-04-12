@@ -17,6 +17,7 @@ function Login() {
         })
         .catch((error) => alert(error));
     }
+    
     const signUp = () => {
         auth.createUserWithEmailAndPassword(email, password)
         .then(() => {
@@ -26,6 +27,7 @@ function Login() {
             alert(e);
         })
     }
+    
     const GoogleLogin = () => {
         auth.signInWithPopup(provider)
         .then(result => {
