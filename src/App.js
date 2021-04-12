@@ -7,11 +7,13 @@ import UploadPost from './components/UploadPost';
 import { useStateValue } from './StateProvider'
 
 function App() {
+
     const [{ user }] = useStateValue();
+    
     return (
         <div className='App'>
                 {!user ? (
-                            <Login />
+                                <Login />
                             ) : (
                             <div>
                                 <Header />
