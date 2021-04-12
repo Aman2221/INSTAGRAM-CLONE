@@ -3,7 +3,7 @@ import { db } from '../firebase'
 import '../styles/Posts.css'
 import Avatar from '@material-ui/core/Avatar'
 import { useStateValue } from '../StateProvider'
-function Posts({imgSrc, userName, AvatarUrl, caption, postId}) {
+function Posts({imgSrc, userName, caption, postId}) {
 
 
     const [comment, setComment] = useState();
@@ -21,8 +21,7 @@ function Posts({imgSrc, userName, AvatarUrl, caption, postId}) {
             });
         }
         return () => {
-            unsubscribe();
-            
+            unsubscribe(); 
         }
     }, [postId])
 

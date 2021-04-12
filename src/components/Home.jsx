@@ -7,7 +7,6 @@ import InstagramEmbed from 'react-instagram-embed';
 
 function Home() {
 
-    console.log(process.env);
     const [posts, setPosts] = useState([]);
     const [{user}] = useStateValue();
 

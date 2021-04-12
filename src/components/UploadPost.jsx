@@ -3,8 +3,8 @@ import React, { useState }  from 'react'
 import '../styles/UploadPost.css'
 import { storage , db} from '../firebase'
 import { useStateValue } from  '../StateProvider'
-import firebase from 'firebase'
-function UploadPost({userName}) {
+
+function UploadPost() {
     const [caption, setCaption] = useState();
     const [image, setImage] = useState(null);
     const [progress, setProgress] = useState(0);
@@ -30,7 +30,6 @@ function UploadPost({userName}) {
                 storage.ref('images').child(image.name).getDownloadURL()
                 .then(url => {
                     db.collection('posts').add({
-                       
                         caption : caption,
                         imgSrc : url,
                         userName : user.displayName

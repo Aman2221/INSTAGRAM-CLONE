@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import '../styles/Header.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Login from './Login'
 import auth from '../firebase'
 function Header() {
     const history = useHistory();

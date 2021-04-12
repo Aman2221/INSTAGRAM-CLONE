@@ -5,20 +5,18 @@ import Header from './components/Header'
 import Login from './components/Login'
 import UploadPost from './components/UploadPost';
 import { useStateValue } from './StateProvider'
-import InstagramEmbed from 'react-instagram-embed';
 
 function App() {
-    const [{ user }, dispatch] = useStateValue();
+    const [{ user }] = useStateValue();
     return (
         <div className='App'>
                 {!user ? (
-                                <Login />
+                            <Login />
                             ) : (
                             <div>
                                 <Header />
                                 <UploadPost userName={user.displayName} />
                                 <Home />
-                                
                             </div>
                         )
                 }
